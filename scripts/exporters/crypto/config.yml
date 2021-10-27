@@ -1,0 +1,35 @@
+Exporter:
+
+  Version:  "1.0"
+  Author:   "William Yang"
+
+  #------------------------------------------------
+  Interval: "10s" 
+  FiatRate: "usd"
+  Debug:    "false"
+
+  InfluxHost:
+
+    Addr:       "influxdb" # inside docker network
+    Port:       8086
+    Org:        "primary"
+    Bucket:     "primary"
+    AuthToken:  "deadsimple"
+    
+  Sources:
+    Coingecko: 
+  
+      - Id:     bitcoin
+        Ticker: ltc
+
+      - Id:     ethereum
+        Ticker: eth
+
+      - Id:     litecoin
+        Ticker: ltc
+
+      - Id:     dogecoin
+        Ticker: doge
+
+      - Id:     shiba-inu
+        Ticker: shiba

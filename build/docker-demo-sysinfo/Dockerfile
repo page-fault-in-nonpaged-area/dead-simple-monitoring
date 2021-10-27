@@ -1,0 +1,14 @@
+# This is a fake exporter for the purpose of consistency.
+# The exporter assumes system is Linux. Your mileage may vary.
+
+FROM alpine
+RUN apk --no-cache add ca-certificates
+RUN apk add --no-cache bash wget jq curl sysstat
+RUN wget -O /usr/local/bin/yq "https://github.com/mikefarah/yq/releases/download/v4.14.1/yq_linux_amd64"
+RUN chmod +x /usr/local/bin/yq 
+
+ADD /build/config/zoneinfo.zip /zoneinfo.zip
+ENV ZONEINFO /zoneinfo.zip
+COPY ./scripts /scripts
+WORKDIR /scripts/exporters/sysinfo
+ENTRYPOINT ./exporter.sh

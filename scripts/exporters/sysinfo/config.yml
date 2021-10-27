@@ -1,0 +1,17 @@
+Exporter:
+
+  Version:  "1.0"
+  Author:   "William Yang"
+
+  #------------------------------------------------
+  Interval: "20s" 
+  SysID:    "DockerEngine1"
+  Debug:    "false"
+
+  InfluxHost:
+
+    Addr:       "influxdb" # inside docker network
+    Port:       8086
+    Org:        "primary"
+    Bucket:     "primary"
+    AuthToken:  "deadsimple"
