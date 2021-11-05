@@ -32,7 +32,7 @@ To learn how to add coins to the crypto dashboard, click [here](Coins.md).
 
 ----
 
-If you find this useful, feel free to tip a few DogElon Mars (ELON) @ `0x4a865b322bf9f243b59957ff0930259beccdc6c8`
+If you find this useful, feel free to tip a few DogElon Mars (ELON) to `0x4a865b322bf9f243b59957ff0930259beccdc6c8`
 
 ![0x4a865b322bf9f243b59957ff0930259beccdc6c8](assets/doge.jpg "0x4a865b322bf9f243b59957ff0930259beccdc6c8")
 
