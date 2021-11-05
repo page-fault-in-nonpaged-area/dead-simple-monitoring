@@ -16,6 +16,7 @@ echo "Starting cpu log.."
 sar -u 5 > cpu.log &
 sleep 2
 echo "Starting disk log.."
+# vda on mac, sda on linux
 iostat -d sda 5 > disk.log &
 sleep 2
 echo "Starting network log.."
@@ -37,11 +38,24 @@ while true; do
     net_in_rate="${net_arr[4]}"     # or 5
     net_out_rate="${net_arr[5]}"    # or 6
 
+    # vda on mac, sda on linux
     raw_disk="$(cat disk.log | tail -n 2 | tr -d '\0')"
     disk_arr=($(echo "$raw_disk" | tr ' ' '\n'))
     disk_transaction_per_second="${disk_arr[1]}"
     disk_read_per_second="${disk_arr[2]}"
     disk_write_per_second="${disk_arr[3]}"
+
+    if [ "$disk_transaction_per_second" == "tps" ]; then
+        disk_transaction_per_second=0.0
+    fi
+
+    if [ "$disk_read_per_second" == "kB_read/s" ]; then
+        disk_read_per_second=0.0
+    fi
+
+    if [ "$disk_write_per_second" == "kB_wrtn/s" ]; then
+        disk_write_per_second=0.0
+    fi
 
     raw_cpu="$(cat cpu.log | tail -n 1 | tr -d '\0')"
     cpu_arr=($(echo "$raw_cpu" | tr ' ' '\n'))
