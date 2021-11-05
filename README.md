@@ -48,4 +48,6 @@ If you find this useful, feel free to tip a few DogElon Mars (ELON) to `0x4a865b
 ### Sysinfo
 ![screen](assets/screenshot-2.png "screenshot-2")
 
-Tested on Linux and macOS.
+Tested on Linux and macOS. Known Issues:
+
+- macOS names its drives `vda`. Will fix in future.
