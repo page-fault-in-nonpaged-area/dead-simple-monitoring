@@ -28,6 +28,10 @@ To see the dashboard in action, navigate to `http://localhost:3000`. The logins 
 User: `admin`
 Pass: `deadsimple`
 
+Select *Dashboards > Manage* to see your dashboards
+
+![sidebar](assets/sidebar.png "sidebar")
+
 To learn how to add coins to the crypto dashboard, click [here](Coins.md).
 
 ----
