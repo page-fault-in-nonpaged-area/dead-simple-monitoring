@@ -31,5 +31,8 @@ Exporter:
       - Id:     dogecoin
         Ticker: doge
 
+      - Id:     cro
+        Ticker: cro
+
       - Id:     shiba-inu
         Ticker: shiba
