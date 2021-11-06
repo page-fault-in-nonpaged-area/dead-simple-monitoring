@@ -34,5 +34,11 @@ Exporter:
       - Id:     cro
         Ticker: cro
 
+      - Id:     cardano
+        Ticker: ada
+      
+      - Id:     solana
+        Ticker: sol
+
       - Id:     shiba-inu
         Ticker: shiba
